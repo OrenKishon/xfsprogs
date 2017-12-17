@@ -50,7 +50,7 @@ TOOL_SUBDIRS = copy db estimate fsck growfs io logprint mkfs quota \
 		mdrestore repair rtcp m4 man doc debian spaceman
 
 ifneq ("$(PKG_PLATFORM)","darwin")
-TOOL_SUBDIRS += fsr
+TOOL_SUBDIRS += fsr fsr_copy rename move_data
 endif
 
 ifneq ("$(XGETTEXT)","")
@@ -82,6 +82,9 @@ $(LIB_SUBDIRS) $(TOOL_SUBDIRS): include
 $(DLIB_SUBDIRS) $(TOOL_SUBDIRS): libxfs
 db logprint: libxlog
 fsr: libhandle
+fsr_copy: libhandle
+rename: libhandle
+move_data: libhandle
 growfs: libxcmd
 io: libxcmd libhandle
 quota: libxcmd
