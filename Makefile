@@ -50,7 +50,7 @@ TOOL_SUBDIRS = copy db estimate fsck growfs io logprint mkfs quota \
 		mdrestore repair rtcp m4 man doc debian spaceman
 
 ifneq ("$(PKG_PLATFORM)","darwin")
-TOOL_SUBDIRS += fsr fsr_copy rename move_data
+TOOL_SUBDIRS += fsr move_data
 endif
 
 ifneq ("$(XGETTEXT)","")
